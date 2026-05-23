@@ -144,7 +144,7 @@ main{
 }
 #aboutpage {
     margin-top: 80px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.267)), url('4.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.267)), url('img/4.jpg');
     background-size: 100% 100vh;
     background-position: center;
     background-attachment: fixed;

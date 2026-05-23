@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It 3</title>
+    <link rel="stylesheet" href="for.css">
+    <script src="https://kit.fontawesome.com/516fabafe3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&family=Smooch&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Smooch&family=Space+Grotesk:wght@300..700&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+</head>
+<body id="homepg">
+    <header id="header">
+        <h2>Carmenwise</h2>
+        <nav class="bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="find">
+            <div class="findwrap">
+                <input type="text" placeholder="name or ingredient">
+                <a href=""><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
+            </div>
+        </form>
+        
+        <section class="cate">
+            <div class="cate-item">
+                <a href="" class="circle"><i class="fa-solid fa-apple-whole fa-2x"></i></a>
+                <span>Healthy</span></div>
+            <div class="cate-item">
+                <a href="" class="circle"><i class="fa-solid fa-cookie fa-2x"></i></a>
+                <span>Dessert</span></div>
+            <div class="cate-item">
+                <a href="" class="circle"><i class="fa-solid fa-burger fa-2x"></i></a>
+                <span>Quick Meal</span></div>
+            <div class="cate-item">
+                <a href="" class="circle"><i class="fa-solid fa-leaf fa-2x"></i></a>
+                <span>Vegan</span></div>
+            <div class="cate-item">
+                <a href="" class="circle"><i class="fa-solid fa-drumstick-bite fa-2x"></i></a>
+                <span>Non Vegan</span></div>
+        </section>
+
+        <section class="trend-section">
+            <h2>Chef's Choice</h2>
+            <div class="trend-contain">
+                <div class="trending">
+                    <img src="img\1.jpg">
+                    <h6>Choco Cake</h6>
+                </div>
+                <div class="trending">
+                    <img src="img\2.jpg">
+                    <h6>Brownie Cake</h6>
+                </div>
+                <div class="trending">
+                    <img src="img\3.jpg">
+                    <h6>Chicken Noodle</h6>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="new">
+            <h1>Newsletter</h1>
+            <p>*You have to sign in before submitting a new recipe</p>
+            <form class="new-re" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="post_title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="type" name="post_type">Type</label>
+                    <select id="type">
+                        <option value="Healthy">Healthy</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Quick Meal">Quick Meal</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Non Vegan">Non Vegan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ingredient">Ingredient:</label>
+                    <textarea id="ingredient" name="post_ingredient" rows="10" cols="50"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Cooking">How to cook:</label>
+                    <textarea id="Cooking" name="post_cooking" rows="20" cols="100"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file">File:</label>
+                    <input type="file" id="file" name="post_image" accept="image/png, image/jpeg">
+                </div>
+                <div class="submit-but">
+                    <input type="submit" value="Submit Recipe">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>Copyright &copy; 2026 &nbsp; <strong>Carmenwise</strong>. All Rights Reserved.</p>
+        <p>
+            <i class="fa-regular fa-envelope"></i>
+            Contact Us: Carmenwise@gmail.com
+        </p>
+    </footer>
+</body>
+</html>

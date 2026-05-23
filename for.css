@@ -1,0 +1,358 @@
+body{
+    margin:0%;
+    background-color: hsl(40, 57%, 91%);
+}
+header{
+    margin:0%;
+    position:fixed;
+    width:100%;
+    top:0;
+    height:80px;
+    display:flex;
+    background-color: #3b6241;
+    z-index: 1000;
+    overflow:hidden;
+    justify-content: space-between;
+    align-items:center;
+}
+header h2{
+    margin: 0;
+    color: rgb(19, 19, 19);
+    font-family: Smooch;
+    font-size: 60px;
+    margin-left: 2%;
+}
+.bar a{
+    text-decoration: none;
+    font-weight: 600;
+    padding:10px;
+    color:rgb(245, 242, 242);
+}
+.bar a:hover{
+    color: hsl(39, 24%, 67%);
+}
+.bar ul{
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    list-style: none;
+    position: relative;
+    padding: 0px 10px;
+    font-family: sans-serif;
+}
+main{
+    position:relative;
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+.find{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+.findwrap{
+    width: 50%;
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+.findwrap input{
+    width: 75%;
+    border-radius: 50px;
+    padding:12px 60px 12px 20px;
+    font-size: 20px;
+}
+.findwrap i{
+    position:absolute;
+    right: 10%;
+    top: 8px;
+    text-decoration: none;
+    color:rgb(14, 14, 14);
+}
+.trend-section h2{
+    margin-top:30px;
+    margin-left:15%;
+    margin-bottom: 5px;
+    color:hsl(39, 46%, 24%);
+    font-family: sans-serif;
+    font-style:italic;
+    font-size: 30px;
+    
+}
+.trend-contain{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding: 20px;
+}
+.trending{
+    width:250px;
+    text-align:center;
+    border:solid;
+}
+.trending img{
+    margin: 3px 3px 3px 3px;
+    width:97%;
+    height: 250px;
+}
+.trending h6{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.cate{
+    display:flex;
+    justify-content: center;
+    gap:50px;
+    margin:20px;
+}
+.cate-item{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight:600;
+    color: #444;
+}
+.cate-item a{
+    text-decoration: none;
+    color:#fdfffd;
+    margin-bottom: 10px;
+}
+.cate-item:hover span{
+    color: #8e8a8a;
+}
+.circle{
+    width:60px;
+    height:60px;
+    background-color: #3b6241;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.ABU{
+    font-family: Zen Maru Gothic;
+}
+.ABU h1{
+    margin-left: 60%;
+    color:#eee;
+    font-family: Smooch;
+    font-size: 60px;
+    margin-bottom: 6px;
+}
+#aboutpage {
+    margin-top: 80px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.267)), url('../img/4.jpg');
+    background-size: 100% 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    margin:0;
+    min-height: 100vh;
+}
+.status{
+    text-align: left;
+    padding: 9px 5% 0px 50%;
+    margin-bottom: 10px;
+
+}
+.status h3{
+    display:block;
+    color:#fafbfa;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: oblique;
+}
+.ABU p{
+    display:block;
+    line-height: 1.5;
+    color:#fafbfa;
+    margin:0;
+    font-size: 20px;
+}
+.user h1,
+#recipe-title,
+.new h1{
+    display:flex;
+    justify-content: center;
+    font-family: 'Smooch', cursive;
+    font-size: 70px;
+    color:hsl(39, 46%, 24%);
+    margin-bottom: 2px;
+}
+.new p{
+    color:hsl(0, 82%, 36%);
+    font-family: monospace;
+    font-style: italic;
+    display:flex;
+    text-align: left;
+    margin-left:23%;
+}
+.new-re{
+    max-width: 800px;
+    margin:0 auto;
+    padding:20px;
+    border-radius: 20px;
+}
+.form-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding:0% 20px;
+}
+.form-group label{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group textarea{
+    padding:7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+.form-group select, 
+.form-group input{
+    padding:7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    width:240px;
+}
+.submit-but{
+    text-align: center;
+}
+.sign-but input,
+.submit-but input{
+    background-color: #3b6241;
+    color:#ffffff;
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 15px;
+    border-radius: 30px;
+    border:none;
+    cursor: pointer;
+    font-family: cursive;
+}
+.sign-but input:hover,
+.submit-but input:hover{
+    background-color: #66896b;
+    transform: scale(1.05);
+}
+#signin,
+#homepg{
+    margin:0;
+    padding:0;
+    background-image:url('img/5.png'),url('img/6.png');
+    background-position: -60px 38px, calc(100% + 60px) 40px;
+    background-size: 500px 100vh, 500px 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+
+}
+footer hr{
+    margin:50px;
+    height:1px;
+    background-color:#66896b;
+    border:none;
+}
+#aboutpage footer p,
+footer p{
+    display:flex;
+    justify-content: center;
+    line-height: 1;
+    font-family: Space Grotesk;
+}
+#aboutpage footer p{
+    color:#fafbfa
+}
+.user-sign{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width:300px;
+    margin:50px auto 0 auto;
+}
+.sign input{
+    border:none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width:300px;
+    height:40px;
+    background-color: transparent;
+}
+.sign input:focus{
+    border-bottom-color:hsl(41, 25%, 35%) ;
+}
+.user-link{
+    display: flex;
+    width:300px;
+    justify-content: space-between;
+}
+.user-link a {
+    text-decoration: none;
+    margin-top:-10px;
+    color:#66896b;
+}
+.user a:hover {
+    text-decoration: underline;
+}
+.sign-but{
+    margin-top:40px;
+}
+.category-container,
+.recipe-container{
+    margin-top: 120px;
+}
+.recipe{
+    max-width: 1200px;
+    margin:0 auto;
+    font-family: Zen Maru Gothic;
+    display:flex;
+    align-items: flex-start;
+    gap:40px;
+}
+#recipe-img{
+    width:100%;
+    border:solid;
+}
+.col-side {
+    flex: 1; 
+}
+.col-ingre {
+    flex: 1;
+}
+.col-steps {
+    flex: 3; 
+}
+#recipe-steps {
+    white-space: pre-wrap; 
+    line-height: 1.5;
+}
+.card-info{
+    max-width: 1200px;
+    margin:0 auto;
+    font-family: Zen Maru Gothic;
+}
+#recipe-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.card-info{
+    border:solid;
+    border-radius: 2px;
+}
+.target-img{
+    width:97%;
+    height: 250px;
+}
+.card-info a{
+    text-decoration:none;
+}

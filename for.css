@@ -79,21 +79,30 @@ main{
     font-size: 30px;
     
 }
-.trend-contain{
-    display:flex;
-    justify-content:center;
-    gap:40px;
+.trend-contain {
+    display: flex;
+    justify-content: center;
+    gap: 2%; /* Dùng phần trăm để khoảng cách giữa các ô tự co giãn */
     padding: 20px;
+    width: 100%; /* Đảm bảo vùng chứa phủ hết màn hình */
+    box-sizing: border-box;
 }
-.trending{
-    width:250px;
-    text-align:center;
-    border:solid;
+
+.trending {
+    width: 25%; /* Thay vì ép cứng 250px, ta cho mỗi ô chiếm 25% chiều rộng màn hình */
+    max-width: 280px; /* Chiều rộng tối đa khi mở máy tính màn hình lớn */
+    min-width: 100px; /* Không cho phép nhỏ quá mức kích thước tối thiểu */
+    text-align: center;
+    border: solid;
+    box-sizing: border-box;
 }
-.trending img{
-    margin: 3px 3px 3px 3px;
-    width:97%;
-    height: 250px;
+
+.trending img {
+    margin: 3px;
+    width: 97%;
+    height: auto; /* CHÍ MẠNG: Đổi từ 250px thành auto để ảnh tự thu nhỏ đều cả chiều cao, không bị méo ảnh */
+    aspect-ratio: 1 / 1; /* Ép cái ảnh luôn luôn là hình vuông chuẩn tỉ lệ giống nhau */
+    object-fit: cover; /* Giúp ảnh không bị vỡ hay bóp méo khi co giãn */
 }
 .trending h6{
     font-size: 18px;
@@ -355,4 +364,104 @@ footer p{
 }
 .card-info a{
     text-decoration:none;
+}
+/* ==================== ĐOẠN CSS DÀNH CHO ĐIỆN THOẠI ==================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Thanh Header: Tuyệt đối giữ HÀNG NGANG, không cho nhảy dòng */
+    header {
+        height: 70px;                   /* Thu hẹp chiều cao một chút cho thanh thoát */
+        flex-direction: row !important; /* Ép buộc giữ hàng ngang */
+        flex-wrap: nowrap !important;   /* TUYỆT ĐỐI KHÔNG cho chữ nhảy xuống dòng */
+        padding: 0 15px;
+    }
+    header h2 {
+        margin-left: 0;
+        font-size: 28px;                /* Thu nhỏ chữ logo lại để nhường chỗ cho menu */
+    }
+    .bar {
+        width: auto;
+    }
+    .bar ul {
+        display: flex;
+        flex-direction: row !important; /* Giữ các nút menu nằm ngang */
+        flex-wrap: nowrap !important;   /* Không cho nút menu rớt dòng */
+        justify-content: flex-end;
+        gap: 5px;                       /* Thu hẹp khoảng cách giữa các nút */
+        padding: 0;
+        margin: 0;
+    }
+    .bar a {
+        padding: 5px 8px;               /* Thu nhỏ vùng bấm */
+        font-size: 13px;                /* Hạ size chữ xuống để vừa khít màn hình dọc */
+    }
+    main {
+        margin-top: 85px;               /* Căn chỉnh lại khoảng cách với header mới */
+    }
+
+    /* 2. Chef's Choice: Ép giữ nguyên HÀNG NGANG 3 CỘT, tự động co nhỏ */
+    .trend-contain {
+        flex-direction: row !important; /* Ép buộc 3 ô nằm hàng ngang, không xếp dọc nữa */
+        justify-content: center;
+        gap: 2%;                        /* Giữ khoảng cách co giãn bằng % */
+        padding: 10px;
+        width: 100%;
+    }
+    .trending {
+        width: 31% !important;          /* Chia đều chiều rộng (31% x 3 ô = 93%, còn lại là gap) */
+        max-width: none !important;
+        min-width: 0 !important;        /* CHÍ MẠNG: Xóa min-width: 100px cũ để ô có thể tự co nhỏ thoải mái */
+        box-sizing: border-box;
+    }
+    .trending img {
+        width: 100%;                    /* Ảnh luôn đầy khung ô chứa */
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .trending h6 {
+        font-size: 12px;                /* Thu nhỏ chữ tên món ăn để không phá gãy khung */
+        margin-top: 6px;
+        white-space: nowrap;            /* Không cho chữ dài tự ý xuống dòng làm lệch khung */
+        overflow: hidden;
+        text-overflow: ellipsis;        /* Nếu tên món quá dài sẽ tự có dấu bôi đen "..." ở cuối */
+    }
+
+    /* 3. Các thành phần khác tối ưu trên điện thoại */
+    .findwrap {
+        width: 85%;
+    }
+    .findwrap input {
+        font-size: 16px;
+        padding: 10px 50px 10px 15px;
+    }
+    .findwrap i {
+        top: 6px;
+        right: 5%;
+    }
+    
+    /* Danh mục vòng tròn: Có 5 nút nên để flex-wrap để nếu màn hình quá bé nó tự rớt bớt nút xuống */
+    .cate {
+        gap: 12px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+    .cate-item span {
+        font-size: 12px;
+    }
+
+    /* Trang About Us */
+    .ABU h1 { margin-left: 0; text-align: center; font-size: 35px; }
+    .status { padding: 15px 5% !important; text-align: center; }
+    .status h3 { font-size: 22px; }
+    .ABU p { font-size: 15px; }
+
+    /* Form Newsletter */
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100% !important;         /* Trên điện thoại thì các ô nhập liệu bung 100% cho dễ bấm */
+        box-sizing: border-box;
+    }
 }

@@ -384,25 +384,27 @@ footer p{
         padding: 5px !important; 
         font-size: 14px !important; 
     }
-    .cate { 
-        display: flex !important; 
-        justify-content: space-evenly !important; 
+    .cate {
+        display: flex !important;
+        justify-content: space-between !important; /* Ép khít lại ở giữa, dãn đều ra 2 bên mép */
         gap: 0 !important; 
-        margin: 20px auto !important; 
-        width: 100% !important; 
-        padding: 0 10px !important; 
-        box-sizing: border-box !important; 
+        margin: 20px auto !important;
+        width: 100% !important;
+        padding: 0 10px !important; /* Giữ khoảng cách an toàn với mép màn hình */
+        box-sizing: border-box !important;
         flex-wrap: nowrap !important; 
     }
-    .cate-item { 
-        width: 19% !important; 
-        font-size: 12px !important; 
+
+    .cate-item {
+        width: 19.5% !important; /* Nới rộng tỷ lệ ôm khung */
+        font-size: 12px !important; /* Chữ giữ nguyên 12px để không bị rớt dòng */
     }
-    .circle { 
-        width: 48px !important; 
-        height: 48px !important; 
+
+    .circle {
+        width: 58px !important; /* Bự chà bá luôn (cũ là 48px) */
+        height: 58px !important;
     }
-    .circle img, .circle i { transform: scale(0.8) !important; }
+    .circle img, .circle i { transform: scale(0.9) !important; }
 
     /* 2. THANH TÌM KIẾM: Kéo dài ra chiếm trọn màn hình điện thoại */
     .findwrap {

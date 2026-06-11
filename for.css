@@ -479,7 +479,7 @@ footer p{
 
     #aboutpage {
         background-size: cover !important;
-        background-position: center !important; /* Kéo tâm ảnh nền ra giữa */
+        background-position: left !important; /* Kéo tâm ảnh nền ra giữa */
         background-attachment: scroll !important;
     }
 }

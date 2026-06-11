@@ -408,7 +408,7 @@ footer p{
 
     /* 2. THANH TÌM KIẾM: Kéo dài ra chiếm trọn màn hình điện thoại */
     .findwrap {
-        width: 95% !important; /* Tăng từ 50% lên 90% */
+        width: 90% !important; /* Tăng từ 50% lên 90% */
     }
     .findwrap input {
         width: 100% !important; /* Ô nhập liệu bung hết cỡ */
@@ -437,7 +437,7 @@ footer p{
     }
 
     .trending {
-        flex: 0 0 65% !important; /* MẤU CHỐT: Mỗi ô sẽ bự bằng 65% màn hình, phần còn lại bị che đi để người ta biết mà vuốt */
+        flex: 0 0 60% !important; /* MẤU CHỐT: Mỗi ô sẽ bự bằng 65% màn hình, phần còn lại bị che đi để người ta biết mà vuốt */
         max-width: none !important;
         padding-bottom: 10px !important;
     }
@@ -460,7 +460,7 @@ footer p{
         padding: 0 !important;
     }
     .form-group, .new p {
-        width: 99% !important; /* Kéo dòng chữ đỏ và các ô nhập liệu ra 90% */
+        width: 90% !important; /* Kéo dòng chữ đỏ và các ô nhập liệu ra 90% */
         max-width: none !important;
         margin-left: auto !important;
         margin-right: auto !important;

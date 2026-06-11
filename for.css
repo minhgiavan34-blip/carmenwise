@@ -424,7 +424,7 @@ footer p{
         padding: 0 !important;
     }
     .form-group, .new p {
-        width: 90% !important; /* Kéo dòng chữ đỏ và các ô nhập liệu ra 90% */
+        width: 99% !important; /* Kéo dòng chữ đỏ và các ô nhập liệu ra 90% */
         max-width: none !important;
         margin-left: auto !important;
         margin-right: auto !important;

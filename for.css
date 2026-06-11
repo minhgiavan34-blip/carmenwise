@@ -418,20 +418,32 @@ footer p{
 
     /* 3. CHEF'S CHOICE: Ép 3 ô nằm ngang nhưng không bị lòi viền, lòi chữ */
    .trend-contain {
-        flex-direction: column !important; /* Ép xếp theo chiều dọc từ trên xuống */
-        align-items: center !important; /* Căn giữa các ô */
-        gap: 25px !important; /* Tạo khoảng cách rộng rãi giữa các ô */
+        display: flex !important;
+        flex-direction: row !important; /* Ép nằm trên 1 hàng ngang */
+        flex-wrap: nowrap !important; /* Tuyệt đối không cho rớt xuống hàng dọc */
+        overflow-x: auto !important; /* Bật tính năng lướt ngang */
+        gap: 15px !important; /* Khoảng cách giữa các ô */
+        justify-content: flex-start !important; /* Bắt đầu xếp từ lề trái */
+        padding: 10px 5px 20px 15px !important;
+        scroll-behavior: smooth !important; /* Vuốt cho mượt */
+        -webkit-overflow-scrolling: touch !important; /* Hỗ trợ vuốt siêu mượt trên iPhone */
     }
-    .trending {
-        width: 75% !important; /* Mỗi ô chiếm 80% màn hình, tha hồ to đẹp */
-        max-width: 320px !important;
-        padding-bottom: 10px !important;
-    }
-    .trending h6 {
-        font-size: 20px !important; /* Chữ to lại bình thường */
-        white-space: nowrap !important; /* Chữ nằm trên 1 dòng */
+    
+    /* Ẩn cái thanh cuộn ngang (scrollbar) xấu xí đi cho giống App */
+    .trend-contain::-webkit-scrollbar {
+        display: none !important;
     }
 
+    .trending {
+        flex: 0 0 65% !important; /* MẤU CHỐT: Mỗi ô sẽ bự bằng 65% màn hình, phần còn lại bị che đi để người ta biết mà vuốt */
+        max-width: none !important;
+        padding-bottom: 10px !important;
+    }
+    
+    .trending h6 {
+        font-size: 16px !important; 
+        white-space: nowrap !important; 
+    }
     /* 4. NEWSLETTER & FORM: Thẳng tắp 1 cột từ trên xuống dưới */
     .new p {
         text-align: left !important;
@@ -466,7 +478,7 @@ footer p{
     /* 5. TRANG ABOUT US: Đưa chữ về giữa, xóa cái lề 50% ép góc dở hơi */
     .ABU h1 {
         margin-left: 0 !important; /* Không đẩy sang phải nữa */
-        font-size: 40px !important; /* Chữ nhỏ lại vừa màn hình đt */
+        font-size: 46px !important; /* Chữ nhỏ lại vừa màn hình đt */
         text-align: center !important; /* Cho chữ ra chính giữa */
         width: 100% !important;
         white-space: normal !important;

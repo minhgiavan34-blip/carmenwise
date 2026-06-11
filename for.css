@@ -370,55 +370,72 @@ footer p{
     text-decoration:none;
 }
 /* ==========================================================================
-   ĐOẠN CSS NÀY CHỈ KÍCH HOẠT TRÊN ĐIỆN THOẠI - MÁY TÍNH KHÔNG BỊ ẢNH HƯỞNG
+   ĐOẠN CSS NÀY CHỈ KÍCH HOẠT TRÊN ĐIỆN THOẠI - MÁY TÍNH GIỮ NGUYÊN ĐẸP ĐẼ
    ========================================================================== */
 @media screen and (max-width: 768px) {
     
-    /* 1. TRANG INDEX: Thu nhỏ 5 nút tròn phân loại cho vừa khít màn hình đt */
+    /* 1. SỬA CHỮ CARMENWISE: Cho to lên, rõ ràng, không bị bóp nhỏ */
+    header h2 {
+        font-size: 42px !important; /* Tăng kích thước chữ logo trên đt */
+        margin-left: 15px !important;
+        white-space: nowrap !important;
+    }
+    
+    /* Thu nhỏ nhẹ menu chữ Home, About Us, Sign In để nhường chỗ cho logo */
+    .bar a {
+        padding: 5px !important;
+        font-size: 14px !important;
+    }
+
+    /* 2. SỬA TYPE MENU: Căn giữa đều tăm tắp, ôm trọn màn hình không bị lệch */
     .cate {
-        gap: 10px !important; 
+        display: flex !important;
+        justify-content: space-evenly !important; /* Chia đều khoảng cách 5 nút */
+        gap: 0 !important; 
         margin: 20px auto !important;
         width: 100% !important;
-        flex-wrap: nowrap !important; /* Ép nằm trên 1 hàng không cho rớt */
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+        flex-wrap: nowrap !important; /* Khóa chết trên 1 hàng ngang */
     }
 
     .cate-item {
-        font-size: 13px !important; /* Chữ nhỏ lại chút cho đẹp */
-        width: 18% !important;
+        width: 19% !important; /* Khống chế tỉ lệ mỗi nút cân bằng */
+        font-size: 12px !important; /* Chữ nhỏ lại xíu cho vừa một dòng */
     }
 
     .circle {
-        width: 45px !important; /* Vòng tròn thu nhỏ lại trên đt */
-        height: 45px !important;
+        width: 48px !important; /* Vòng tròn thu gọn vừa vặn */
+        height: 48px !important;
     }
 
     .circle img, .circle i {
-        transform: scale(0.75) !important; /* Icon bên trong nhỏ lại */
+        transform: scale(0.8) !important;
     }
 
-    /* 2. TRANG INDEX: Căn giữa dòng chữ đỏ thông báo đăng nhập trên đt */
+    /* 3. SỬA CHỮ ĐỎ: Nằm thẳng hàng, cùng 1 cột ngay trên ô Email và Title */
     .new p {
+        display: block !important;
+        text-align: left !important; /* Căn lề trái giống hệt chữ Email:, Title: */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 90% !important; /* Chiều rộng bằng đúng chiều rộng của form nhập liệu */
+        max-width: 300px; /* Khóa chiều rộng theo các ô input bên dưới */
+        padding-left: 20px !important; /* Thụt đầu dòng nhẹ cho khớp vị trí với chữ Email */
+        box-sizing: border-box !important;
+        font-size: 14px !important; /* Cho chữ đỏ nhỏ lại nhìn tinh tế hơn */
+    }
+    
+    /* Ép cái form và các ô input co giãn chuẩn theo cột chữ đỏ */
+    .user-sign, .form-group {
+        width: 90% !important;
+        max-width: 300px;
         margin: 10px auto !important;
-        text-align: center !important;
-        justify-content: center !important;
-        width: 100% !important;
+        padding: 0 !important;
     }
-
-    /* 3. TRANG ABOUT US: Sửa lỗi ảnh nền bị lặp đôi và giật lag trên đt */
-    #aboutpage {
-        background-size: cover !important; /* Phủ kín mịn màng */
-        background-position: center top !important;
-        background-repeat: no-repeat !important; /* Không cho lặp ảnh */
-        background-attachment: scroll !important; /* Cuộn mượt trên đt */
-    }
-
-    /* Đẩy chữ trang About Us ra giữa trên màn hình đt thay vì lệch phải */
-    .ABU h1 {
-        margin-left: 0 !important;
-        text-align: center !important;
-    }
-    .status {
-        padding: 15px 5% !important; /* Xóa bỏ padding-left: 50% khi xem bằng đt */
-        text-align: center !important;
+    
+    .form-group input, .form-group textarea {
+        width: 100% !important; /* Đảm bảo ô nhập rộng bằng khung */
+        box-sizing: border-box !important;
     }
 }

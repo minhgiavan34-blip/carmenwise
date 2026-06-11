@@ -384,7 +384,7 @@ footer p{
 
     /* 2. THANH TÌM KIẾM: Kéo dài ra chiếm trọn màn hình điện thoại */
     .findwrap {
-        width: 90% !important; /* Tăng từ 50% lên 90% */
+        width: 95% !important; /* Tăng từ 50% lên 90% */
     }
     .findwrap input {
         width: 100% !important; /* Ô nhập liệu bung hết cỡ */
@@ -395,19 +395,19 @@ footer p{
     }
 
     /* 3. CHEF'S CHOICE: Ép 3 ô nằm ngang nhưng không bị lòi viền, lòi chữ */
-    .trend-contain {
-        gap: 2% !important;
-        padding: 10px 5px !important;
+   .trend-contain {
+        flex-direction: column !important; /* Ép xếp theo chiều dọc từ trên xuống */
+        align-items: center !important; /* Căn giữa các ô */
+        gap: 20px !important; /* Tạo khoảng cách rộng rãi giữa các ô */
     }
     .trending {
-        width: 31% !important; /* Mỗi ô tự chia lại tỉ lệ */
-        min-width: 0 !important; /* XÓA BỎ cái khóa 100px gây tràn viền */
-        padding-bottom: 5px !important;
+        width: 80% !important; /* Mỗi ô chiếm 80% màn hình, tha hồ to đẹp */
+        max-width: 320px !important;
+        padding-bottom: 10px !important;
     }
     .trending h6 {
-        font-size: 11px !important; /* Chữ dưới ảnh phải nhỏ lại để vừa một hàng */
-        margin-top: 5px !important;
-        white-space: normal !important;
+        font-size: 16px !important; /* Chữ to lại bình thường */
+        white-space: nowrap !important; /* Chữ nằm trên 1 dòng */
     }
 
     /* 4. NEWSLETTER & FORM: Thẳng tắp 1 cột từ trên xuống dưới */
@@ -421,20 +421,20 @@ footer p{
     }
     .new-re {
         width: 100% !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-    }
-    .form-group {
-        width: 90% !important;
-        margin: 0 auto 15px auto !important;
         padding: 0 !important;
+    }
+    .form-group, .new p {
+        width: 90% !important; /* Kéo dòng chữ đỏ và các ô nhập liệu ra 90% */
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     .form-group label {
         text-align: left;
         width: 100%;
     }
     .form-group input, .form-group textarea {
-        width: 100% !important; /* Ô nhập ôm sát lề phải và trái */
+        width: 100% !important; /* Bung hết cỡ khung nhập liệu */
         box-sizing: border-box !important;
     }
     .submit-but {

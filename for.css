@@ -11,7 +11,6 @@ header{
     display:flex;
     background-color: #3b6241;
     z-index: 1000;
-    overflow:hidden;
     justify-content: space-between;
     align-items:center;
 }
@@ -19,8 +18,9 @@ header h2{
     margin: 0;
     color: rgb(19, 19, 19);
     font-family: Smooch;
-    font-size: 60px;
+    font-size: clamp(35px, 5vw, 60px); /* Dùng clamp: Màn hình lớn thì kích thước 60px, màn hình nhỏ tự thu về tối thiểu 35px cực kỳ thông minh chứ không bị ép mất form */
     margin-left: 2%;
+    white-space: nowrap; /* Ép chữ luôn nằm trên một hàng, không bị tự động xuống dòng làm nhỏ chữ */
 }
 .bar a{
     text-decoration: none;
@@ -108,11 +108,13 @@ main{
     font-size: 18px;
     margin-top: 10px;
 }
-.cate{
-    display:flex;
-    justify-content: center;
-    gap:50px;
-    margin:20px;
+.cate {
+    display: flex;
+    justify-content: center; /* Giữ các mục luôn ở chính giữa */
+    gap: 5%; /* Thay vì dùng 50px cố định, dùng % để khoảng cách tự co giãn đều */
+    margin: 20px auto; /* Thêm chữ auto để hộp chứa tự căn giữa màn hình */
+    width: 100%;
+    box-sizing: border-box;
 }
 .cate-item{
     display:flex;
@@ -154,9 +156,9 @@ main{
 #aboutpage {
     margin-top: 80px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.267)), url('img/4.jpg');
-    background-size: 100% 100vh;
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     margin:0;
     min-height: 100vh;
 }

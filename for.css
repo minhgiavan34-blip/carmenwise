@@ -106,7 +106,7 @@ main{
     object-fit: cover; /* Giúp ảnh không bị vỡ hay bóp méo khi co giãn */
 }
 .trending h6{
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
 }
 .cate {

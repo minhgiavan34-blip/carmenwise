@@ -463,4 +463,23 @@ footer p{
         width: 100% !important;
         text-align: center;
     }
+    /* 5. TRANG ABOUT US: Đưa chữ về giữa, xóa cái lề 50% ép góc dở hơi */
+    .ABU h1 {
+        margin-left: 0 !important; /* Không đẩy sang phải nữa */
+        font-size: 40px !important; /* Chữ nhỏ lại vừa màn hình đt */
+        text-align: center !important; /* Cho chữ ra chính giữa */
+        width: 100% !important;
+        white-space: normal !important;
+    }
+    
+    .status {
+        padding: 20px 5% !important; /* XÓA BỎ cái padding 50% tai hại */
+        text-align: center !important; /* Chữ căn giữa cho đẹp */
+    }
+
+    #aboutpage {
+        background-size: cover !important;
+        background-position: center !important; /* Kéo tâm ảnh nền ra giữa */
+        background-attachment: scroll !important;
+    }
 }

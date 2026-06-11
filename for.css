@@ -420,15 +420,15 @@ footer p{
    .trend-contain {
         flex-direction: column !important; /* Ép xếp theo chiều dọc từ trên xuống */
         align-items: center !important; /* Căn giữa các ô */
-        gap: 20px !important; /* Tạo khoảng cách rộng rãi giữa các ô */
+        gap: 25px !important; /* Tạo khoảng cách rộng rãi giữa các ô */
     }
     .trending {
-        width: 80% !important; /* Mỗi ô chiếm 80% màn hình, tha hồ to đẹp */
+        width: 75% !important; /* Mỗi ô chiếm 80% màn hình, tha hồ to đẹp */
         max-width: 320px !important;
         padding-bottom: 10px !important;
     }
     .trending h6 {
-        font-size: 16px !important; /* Chữ to lại bình thường */
+        font-size: 20px !important; /* Chữ to lại bình thường */
         white-space: nowrap !important; /* Chữ nằm trên 1 dòng */
     }
 
